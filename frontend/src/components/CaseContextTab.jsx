@@ -5,26 +5,26 @@ export default function CaseContextTab({ profile }) {
     <div className="space-y-6">
       {/* Profile card */}
       <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
-        <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-3">Client Profile</h3>
+        <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-3">Engagement Profile</h3>
         <div className="grid grid-cols-2 gap-y-2 gap-x-6 text-sm">
           <div>
-            <span className="text-slate-500">Name</span>
+            <span className="text-slate-500">Entity</span>
             <p className="font-medium text-slate-800">{profile.name}</p>
           </div>
           <div>
-            <span className="text-slate-500">Filing Type</span>
+            <span className="text-slate-500">Entity Type</span>
             <p className="font-medium text-slate-800">{profile.entity_type}</p>
           </div>
           <div>
-            <span className="text-slate-500">Tax Year</span>
-            <p className="font-medium text-slate-800">{profile.tax_year}</p>
+            <span className="text-slate-500">Audit Period</span>
+            <p className="font-medium text-slate-800">{profile.audit_period}</p>
           </div>
           <div>
-            <span className="text-slate-500">Filing Deadline</span>
-            <p className="font-medium text-slate-800">{profile.filing_deadline}</p>
+            <span className="text-slate-500">Report Deadline</span>
+            <p className="font-medium text-slate-800">{profile.audit_deadline}</p>
           </div>
           <div>
-            <span className="text-slate-500">Assigned CPA</span>
+            <span className="text-slate-500">Assigned Auditor</span>
             <p className="font-medium text-slate-800">{profile.assigned_cpa}</p>
           </div>
         </div>

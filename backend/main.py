@@ -85,7 +85,7 @@ async def upload_documents(files: list[UploadFile] = File(...)):
                 result = analyze_document(
                     text,
                     CLIENT_PROFILE["name"],
-                    CLIENT_PROFILE["tax_year"],
+                    2025,
                     CLIENT_PROFILE["required_docs"],
                 )
                 doc = {"filename": upload.filename, "extracted_text": text, **result}

@@ -19,27 +19,28 @@ def generate_email(profile: dict, missing_docs_report: dict) -> str:
     if missing_lines:
         outstanding += f"Still missing:\n{missing_lines}\n"
     if rejected_lines:
-        outstanding += f"\nDocuments that need to be re-uploaded:\n{rejected_lines}"
+        outstanding += f"\nDocuments that need to be re-submitted:\n{rejected_lines}"
 
-    prompt = f"""You are drafting a professional follow-up email on behalf of {profile["assigned_cpa"]}, CPA, to their client {profile["name"]}.
+    prompt = f"""You are drafting a professional follow-up email on behalf of {profile["assigned_cpa"]}, CPA, to their audit client {profile["name"]}.
 
-CLIENT CONTEXT:
-- Filing type: {profile["entity_type"]}
-- Filing deadline: {profile["filing_deadline"]}
+ENGAGEMENT CONTEXT:
+- Entity type: {profile["entity_type"]}
+- Audit period: {profile["audit_period"]}
+- Audit report deadline: {profile["audit_deadline"]}
 - Communication trail:
 {trail}
 
 STILL MISSING OR INVALID:
 {outstanding}
 
-Write a professional, warm, specific email that:
-1. Acknowledges what has already been received
+Write a professional, clear email that:
+1. Acknowledges the documents already received
 2. Lists exactly what is still needed with brief context for each item
-3. References the filing deadline with appropriate urgency
-4. Does not mention specific dollar amounts or tax positions
-5. Is addressed directly to {profile["name"]}
+3. References the audit deadline with appropriate urgency
+4. Does not mention specific financial figures or preliminary findings
+5. Is addressed directly to the finance team at {profile["name"]}
 
-Tone: professional but approachable. Not robotic. Not threatening.
+Tone: professional and collegial. Not robotic. Not threatening.
 Length: under 200 words.
 Do not add a subject line — just the email body."""
 

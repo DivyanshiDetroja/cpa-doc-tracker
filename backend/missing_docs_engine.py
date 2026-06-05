@@ -27,9 +27,9 @@ def build_missing_docs_report(profile: dict, uploaded_docs: list) -> dict:
     missing_list = "\n".join(f'- {r["type"]} from {r["source"]}' for r in missing_types) or "None"
     trail = "\n".join(f'{e["date"]}: {e["note"]}' for e in profile["communication_trail"])
 
-    prompt = f"""You are an AI assistant for a CPA firm analyzing a client's document intake status.
+    prompt = f"""You are an AI assistant for a CPA firm managing a financial statement audit engagement.
 
-CLIENT: {profile["name"]} | {profile["entity_type"]} | Tax Year: {profile["tax_year"]}
+CLIENT: {profile["name"]} | {profile["entity_type"]} | Audit Period: {profile["audit_period"]}
 
 COMMUNICATION TRAIL:
 {trail}
@@ -40,13 +40,13 @@ DOCUMENTS ACCEPTED:
 DOCUMENTS STILL MISSING:
 {missing_list}
 
-DOCUMENTS REJECTED (uploaded but failed validation):
+DOCUMENTS REJECTED (submitted but failed validation):
 {rejected_list}
 
 For each missing document, assign urgency:
 - "high": no prior communication about this document
 - "medium": client was reminded but gave no update
-- "low": client communicated a reason for delay or expected date
+- "low": client communicated a reason for delay or an expected delivery date
 
 Return a JSON object with this exact shape:
 {{
