@@ -31,9 +31,9 @@ function CPADashboard() {
       <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-            CPA
+            🐝
           </div>
-          <span className="font-semibold text-slate-800 text-lg">DocCheck</span>
+          <span className="font-semibold text-slate-800 text-lg">Audit Bee</span>
         </div>
         {profile && (
           <div className="text-right text-sm">

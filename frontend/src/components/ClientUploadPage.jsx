@@ -37,8 +37,8 @@ export default function ClientUploadPage() {
     <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-lg">
         <div className="text-center mb-8">
-          <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
-            CPA
+          <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-3">
+            🐝
           </div>
           <h1 className="text-2xl font-semibold text-slate-800">Upload Your Financial Statements</h1>
           <p className="text-slate-500 mt-1 text-sm">
@@ -54,7 +54,7 @@ export default function ClientUploadPage() {
               {count} document{count !== 1 ? 's' : ''} successfully uploaded.
             </p>
             <p className="text-sm text-green-500 mt-3">
-              Your CPA will review them and follow up if anything is needed.
+              Your auditor will review them and follow up if anything is needed.
             </p>
           </div>
         )}
