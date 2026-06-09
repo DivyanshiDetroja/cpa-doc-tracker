@@ -2,6 +2,10 @@
 
 AI-powered financial statement intake and missing document assistant for audit engagements. Built for the NYCPA Hackathon.
 
+
+
+https://github.com/user-attachments/assets/e4512151-2261-417d-9ade-ff92a4d970ef
+
 ---
 
 ## What it does
